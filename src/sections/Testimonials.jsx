@@ -14,7 +14,14 @@ const Testimonials = () => {
                 <div className="testimonials_inner-after testimonials_inner-before relative -my-12 -mr-3 flex items-start max-lg:static max-md:block">
                     <div className="testimonials_group-after flex-50">
                         {testimonials.slice(0, halfLength).map((testimonial) =>
-                        <TestimonialItem key={testimonial.id} item={testimonial} containerClassName="last:after:hidden last:after:ma-md:block"/>)}
+                        <TestimonialItem key={testimonial.id} item={testimonial} containerClassName="last:after:hidden last:after:ma-md:block"/>
+                        )}
+                    </div>
+
+                    <div className="flex-50">
+                        {testimonials.slice(halfLength).map((testimonial) =>
+                            <TestimonialItem key={testimonial.id} item={testimonial} containerClassName="last:after:hidden after:right-auto after:left-0 after:max-md:-left-4 md:px-12"/>
+                        )}
                     </div>
                 </div>
             </div>
